@@ -16,8 +16,19 @@
 
   services.xserver = {
     enable = true;
+    xkb.layout = "es";
+
     windowManager.i3.enable = true;
   };
+
+  services.displayManager.ly = {
+    enable = true;
+    settings = {
+      animation = "matrix";
+      save = true;
+      load = true;
+    };
+  }
 
   programs.zsh.enable = true;
 
