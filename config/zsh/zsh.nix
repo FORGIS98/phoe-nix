@@ -22,6 +22,6 @@
       plugins = [ "git" "ssh-agent" ];
     };
 
-    initExtra = builtins.readFile ./extra.zsh;
+    initContent = builtins.readFile ./extra.zsh;
   };
 }

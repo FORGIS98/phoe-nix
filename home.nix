@@ -16,6 +16,7 @@ in
     i3
     i3status
     openssh
+    rofi
     
     # doom-emacs
     ripgrep
@@ -26,9 +27,10 @@ in
 
   programs.git = {
     enable = true;
-    userName = "FORGIS98";
-    userEmail = "jorgesolgonzalez1998@gmail.com";
-    extraConfig = {
+    settings = {
+      userName = "FORGIS98";
+      userEmail = "jorgesolgonzalez1998@gmail.com";
+
       init.defaultBranch = "main";
       pull.rebase = false;
     };
