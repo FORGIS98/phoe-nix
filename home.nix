@@ -28,8 +28,8 @@ in
   programs.git = {
     enable = true;
     settings = {
-      userName = "FORGIS98";
-      userEmail = "jorgesolgonzalez1998@gmail.com";
+      user.name = "FORGIS98";
+      user.email = "jorgesolgonzalez1998@gmail.com";
 
       init.defaultBranch = "main";
       pull.rebase = false;
