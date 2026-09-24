@@ -1,7 +1,5 @@
 #!/bin/bash
 
-nix-shell -p git
-
 cp /etc/nixos/hardware-configuration.nix ./hardware-configuration.nix
 git add hardware-configuration.nix
 
