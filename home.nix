@@ -17,6 +17,7 @@ in
     i3status
     openssh
     rofi
+    nitrogen
     
     # doom-emacs
     ripgrep
@@ -24,6 +25,13 @@ in
     coreutils
     clang
   ];
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      vscodevim.vim
+    ];
+  };
 
   programs.git = {
     enable = true;

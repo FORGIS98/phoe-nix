@@ -24,6 +24,8 @@
     windowManager.i3.enable = true;
   };
 
+  console.keyMap = "es";
+
   services.displayManager.ly = {
     enable = true;
     settings = {
