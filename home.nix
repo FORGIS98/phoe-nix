@@ -17,7 +17,7 @@ in
     i3status
     openssh
     rofi
-    nitrogen
+    feh
     
     # doom-emacs
     ripgrep
