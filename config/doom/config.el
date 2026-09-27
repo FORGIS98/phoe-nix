@@ -9,7 +9,7 @@
 (setq display-line-numbers-type 'relative)
 (setq frame-title-format "Emacs")
 (setq calendar-holidays nil)
-(setq doom-font (font-spec :size 16))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16))
 
 ;; Backups
 (setq create-lockfiles nil)

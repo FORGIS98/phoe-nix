@@ -1,0 +1,11 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "nix": true
+    },
+    "chat.viewSessions.orientation": "stacked",
+    "chat.sessionSync.enabled": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.minimap.autohide": "scroll",
+    "editor.autoIndentOnPaste": true,
+    "editor.detectIndentation": false
+}
