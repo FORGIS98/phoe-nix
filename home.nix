@@ -74,16 +74,6 @@ in
     ];
   };
 
-  programs.ssh = {
-    enable = true;
-    settings = {
-      "github.com" = {
-        HostName = "github.com";
-        IdentityFile = "~/.ssh/id_ed25519";
-      };
-    };
-  };
-
   programs.git = {
     enable = true;
     settings = {
