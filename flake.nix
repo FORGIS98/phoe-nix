@@ -35,5 +35,29 @@
       };
     };
 
+    # entorno basico al entrar al repo (direnv: use flake)
+    devShells."x86_64-linux".default =
+      let pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      in pkgs.mkShell {
+        packages = with pkgs; [
+          lua
+          luajit
+          python3
+          nodejs
+          gnumake
+          gcc
+          nixfmt
+          statix
+          deadnix
+          luaPackages.luacheck
+          stylua
+          emacs-nox
+          shellcheck
+          shfmt
+          jq
+          ruff
+        ];
+      };
+
   };
 }

@@ -96,6 +96,17 @@
     windowManager.i3.enable = true;
   };
 
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  security.polkit.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   hardware.graphics.enable = true;
 
   # Driver propietario de NVIDIA para la RTX 4070 (AD104, Ada Lovelace usa nouveau por defecto)
@@ -105,6 +116,12 @@
     open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    LIBVA_DRIVER_NAME = "nvidia";
   };
 
   console.keyMap = "es";

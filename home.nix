@@ -7,6 +7,10 @@ in
   home.username = "jorge";
   home.homeDirectory = "/home/jorge";
 
+  home.sessionVariables = {
+    XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
+  };
+
   xdg.userDirs = {
     enable = true;
     desktop = "${config.home.homeDirectory}/Escritorio";
@@ -23,6 +27,8 @@ in
   home.packages = with pkgs; [
     oh-my-zsh
     kitty
+    hyprlauncher
+    kdePackages.dolphin
     neovim
     emacs
     firefox
@@ -30,6 +36,14 @@ in
     android-studio
     openssh
     rofi
+    waybar
+    hyprpaper
+    hyprlock
+    wl-clipboard
+    grim
+    slurp
+    libnotify
+    networkmanagerapplet
     feh
     tree
     bat
@@ -91,9 +105,16 @@ in
 
   services.ssh-agent.enable = true;
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   home.file = {
     ".config/doom".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/doom";
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/hypr";
     ".config/i3".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/i3";
+    ".config/img".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/img";
     ".config/Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/vscode/settings.json";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/nvim";
   };

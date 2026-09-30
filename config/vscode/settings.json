@@ -4,8 +4,9 @@
     },
     "chat.viewSessions.orientation": "stacked",
     "chat.sessionSync.enabled": true,
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "bounded",
     "editor.minimap.autohide": "scroll",
     "editor.autoIndentOnPaste": true,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "editor.wordWrapColumn": 120
 }
