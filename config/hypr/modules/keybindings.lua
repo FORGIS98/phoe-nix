@@ -5,7 +5,7 @@ local menu = "hyprlauncher"
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd("~/phoe-nix/config/i3/scripts/blur-lock.sh"))
+hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd(""))
 
 for _, direction in ipairs({ "left", "down", "up", "right" }) do
     local key = ({ left = "H", down = "J", up = "K", right = "L" })[direction]

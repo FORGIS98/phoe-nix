@@ -36,7 +36,6 @@ in
     android-studio
     openssh
     rofi
-    waybar
     hyprpaper
     hyprlock
     wl-clipboard
@@ -51,6 +50,8 @@ in
     maim
     imagemagick
     jq
+    waybar
+    awww
     
     # BEGIN doom-emacs dependencies
     ripgrep
@@ -105,6 +106,8 @@ in
 
   services.ssh-agent.enable = true;
 
+  wayland.windowManager.hyprland.systemd.enable = false;
+
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
@@ -117,6 +120,7 @@ in
     ".config/img".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/img";
     ".config/Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/vscode/settings.json";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/nvim";
+    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/waybar";
   };
 
   home.stateVersion = "26.05";

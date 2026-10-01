@@ -5,3 +5,8 @@ require("modules.layouts")
 require("modules.input")
 require("modules.keybindings")
 require("modules.windows")
+
+hl.on("hyprland.start", function ()
+	hl.exec_cmd("waybar")
+	hl.exec_cmd("~/.config/hypr/scripts/random-wallpaper.sh")
+end)

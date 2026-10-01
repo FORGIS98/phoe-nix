@@ -17,14 +17,14 @@ exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 165 --primar
 exec --no-startup-id dex --autostart --environment i3
 
 # Set a random wallpaper on all connected screens
-exec --no-startup-id ~/phoe-nix/config/i3/scripts/random-wallpaper.sh
+exec --no-startup-id ~/.config/i3/scripts/random-wallpaper.sh
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock uses blur-lock.sh to lock the screen before suspend.
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/phoe-nix/config/i3/scripts/blur-lock.sh
+exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/scripts/blur-lock.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -54,7 +54,7 @@ bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 
 # lock the session
-bindsym $mod+0 exec --no-startup-id ~/phoe-nix/config/i3/scripts/blur-lock.sh
+bindsym $mod+0 exec --no-startup-id ~/.config/i3/scripts/blur-lock.sh
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -107,7 +107,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # swap the workspaces shown on each monitor
-bindsym $mod+Shift+s exec --no-startup-id ~/phoe-nix/config/i3/scripts/swap-workspaces.sh
+bindsym $mod+Shift+s exec --no-startup-id ~/.config/i3/scripts/swap-workspaces.sh
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle

@@ -61,8 +61,9 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 
 hl.config({
     misc = {
-        force_default_wallpaper = -1,
-        disable_hyprland_logo   = false,
+        force_default_wallpaper  = -1,
+        disable_hyprland_logo    = true,
+        disable_splash_rendering = true,
     },
     ecosystem = {
         no_update_news = true,
