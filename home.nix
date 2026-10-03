@@ -52,13 +52,15 @@ in
     jq
     waybar
     awww
-    
+
     # BEGIN doom-emacs dependencies
     ripgrep
     fd
     coreutils
     clang
     # END doom-emacs dependencies
+
+    (python3.withPackages (pythonPackages: [ pythonPackages.python-dateutil ]))
 
   ];
 
@@ -68,6 +70,12 @@ in
       package = pkgs.gnome-themes-extra;
       name = "Adwaita-dark";
     };
+
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
     };
@@ -86,6 +94,7 @@ in
     enable = true;
     profiles.default.extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
+      pkief.material-icon-theme
     ];
   };
 
@@ -118,9 +127,11 @@ in
     ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/hypr";
     ".config/i3".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/i3";
     ".config/img".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/img";
-    ".config/Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/vscode/settings.json";
+    ".config/Code/User/settings.json".source =
+      config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/vscode/settings.json";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/nvim";
     ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/waybar";
+    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/rofi";
   };
 
   home.stateVersion = "26.05";

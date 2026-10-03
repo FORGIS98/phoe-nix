@@ -51,7 +51,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # lock the session
 bindsym $mod+0 exec --no-startup-id ~/.config/i3/scripts/blur-lock.sh

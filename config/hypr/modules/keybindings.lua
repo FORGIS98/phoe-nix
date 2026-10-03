@@ -1,6 +1,6 @@
 local mainMod = "SUPER"
 local terminal = "kitty"
-local menu = "hyprlauncher"
+local menu = "rofi -show drun"
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
