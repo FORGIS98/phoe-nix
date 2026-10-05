@@ -132,6 +132,7 @@ in
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/nvim";
     ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/waybar";
     ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/rofi";
+    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/kitty";
   };
 
   home.stateVersion = "26.05";
