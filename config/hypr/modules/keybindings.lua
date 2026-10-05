@@ -1,11 +1,13 @@
 local mainMod = "SUPER"
 local terminal = "kitty"
 local menu = "rofi -show drun"
+local lock = "hyprlock"
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd(""))
+hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd(lock))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("~/.config/hypr/scripts/swap-workspaces.sh"))
 
 for _, direction in ipairs({ "left", "down", "up", "right" }) do
     local key = ({ left = "H", down = "J", up = "K", right = "L" })[direction]
@@ -20,7 +22,6 @@ end
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg orientationleft"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg orientationtop"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("hyprctl dispatch fullscreen 0"))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprctl keyword general:layout master"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("hyprctl keyword general:layout dwindle"))
 hl.bind(mainMod .. " + E", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + SHIFT + SPACE", hl.dsp.window.float({ action = "toggle" }))

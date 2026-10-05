@@ -9,5 +9,14 @@
     "editor.autoIndentOnPaste": true,
     "editor.detectIndentation": false,
     "editor.wordWrapColumn": 120,
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "vim.useSystemClipboard": true,
+    "chat.tools.urls.autoApprove": {
+        "https://code.visualstudio.com": true,
+        "https://github.com/microsoft/vscode/wiki/*": true,
+        "https://wiki.hypr.land": {
+            "approveRequest": true,
+            "approveResponse": false
+        }
+    }
 }
