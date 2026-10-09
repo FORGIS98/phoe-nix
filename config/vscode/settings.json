@@ -14,9 +14,6 @@
     "chat.tools.urls.autoApprove": {
         "https://code.visualstudio.com": true,
         "https://github.com/microsoft/vscode/wiki/*": true,
-        "https://wiki.hypr.land": {
-            "approveRequest": true,
-            "approveResponse": false
-        }
+        "https://wiki.hypr.land": true
     }
 }

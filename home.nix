@@ -52,6 +52,7 @@ in
     jq
     waybar
     awww
+    hyprcursor
 
     # BEGIN doom-emacs dependencies
     ripgrep
@@ -63,6 +64,15 @@ in
     (python3.withPackages (pythonPackages: [ pythonPackages.python-dateutil ]))
 
   ];
+
+  home.pointerCursor = {
+    enable = true;
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 24;
+  };
 
   gtk = {
     enable = true;

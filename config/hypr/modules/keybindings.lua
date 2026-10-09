@@ -16,7 +16,7 @@ for _, direction in ipairs({ "left", "down", "up", "right" }) do
     hl.bind(mainMod .. " + " .. direction, hl.dsp.focus({ direction = direction }))
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ direction = direction }))
     hl.bind(mainMod .. " + SHIFT + " .. direction, hl.dsp.window.move({ direction = direction }))
-    hl.bind(mainMod .. " + CTRL + " .. key, hl.dsp.exec_cmd("hyprctl dispatch movecurrentworkspacetomonitor " .. monitorDirection))
+    hl.bind(mainMod .. " + CTRL + " .. key, hl.dsp.workspace.move({ monitor = monitorDirection }))
 end
 
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg orientationleft"))
