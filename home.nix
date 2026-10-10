@@ -25,7 +25,10 @@ in
   };
 
   home.packages = with pkgs; [
+    zsh
     oh-my-zsh
+    zsh-autosuggestions
+    zsh-syntax-highlighting
     kitty
     hyprlauncher
     kdePackages.dolphin
@@ -53,6 +56,7 @@ in
     waybar
     awww
     hyprcursor
+    hypridle
 
     # BEGIN doom-emacs dependencies
     ripgrep
@@ -121,7 +125,7 @@ in
 
   imports = [
     ./config/zsh/zsh.nix
-  ];
+  ]; 
 
   services.ssh-agent.enable = true;
 
@@ -143,6 +147,7 @@ in
     ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/waybar";
     ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/rofi";
     ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/kitty";
+    # ".zshrc".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/zsh/.zshrc";
   };
 
   home.stateVersion = "26.05";

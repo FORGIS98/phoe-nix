@@ -18,4 +18,4 @@ if ! awww query >/dev/null 2>&1; then
     done
 fi
 
-awww img --transition-type simple "${wallpapers[RANDOM % ${#wallpapers[@]}]}"
+awww img --transition-type none "${wallpapers[RANDOM % ${#wallpapers[@]}]}"
