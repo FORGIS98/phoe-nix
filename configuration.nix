@@ -139,8 +139,17 @@
 
   console.keyMap = "es";
 
-  services.displayManager.ly = {
+  services.greetd = {
     enable = true;
+    settings.default_session = {
+      command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --asterisks --cmd 'uwsm start hyprland-uwsm.desktop'";
+      user = "greeter";
+    };
+  };
+
+  # NO ACTIVE
+  services.displayManager.ly = {
+    enable = false;
     settings = {
       animation = "matrix";
       numlock = true;
