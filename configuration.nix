@@ -134,6 +134,7 @@
     NIXOS_OZONE_WL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     LIBVA_DRIVER_NAME = "nvidia";
+    XDG_SESSION_TYPE = "wayland";
   };
 
   console.keyMap = "es";
@@ -145,6 +146,7 @@
       numlock = true;
       save = true;
       load = true;
+      waylandsessions = "/run/current-system/sw/share/wayland-sessions";
     };
   };
 
