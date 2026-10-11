@@ -7,6 +7,8 @@ in
   home.username = "jorge";
   home.homeDirectory = "/home/jorge";
 
+  home.sessionPath = [ "${config.home.homeDirectory}/.opencode/bin" ];
+
   home.sessionVariables = {
     XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
   };

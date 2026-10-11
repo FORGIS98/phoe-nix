@@ -1,6 +1,18 @@
 {
+    "chat.tools.autoApprove": true,
+    "chat.agent.maxRequests": 300,
+    "chat.tools.terminal.enableAutoApprove": true,
     "chat.tools.terminal.autoApprove": {
-        "nix": true
+        "rm": false,
+        "rmdir": false,
+        "del": false,
+        "kill": false,
+        "curl": false,
+        "wget": false,
+        "eval": false,
+        "chmod": false,
+        "chown": false,
+        "/^Remove-Item\\b/i": false
     },
     "chat.viewSessions.orientation": "stacked",
     "chat.sessionSync.enabled": true,
@@ -15,5 +27,6 @@
         "https://code.visualstudio.com": true,
         "https://github.com/microsoft/vscode/wiki/*": true,
         "https://wiki.hypr.land": true
-    }
+    },
+    "workbench.startupEditor": "none"
 }

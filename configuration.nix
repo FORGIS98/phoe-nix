@@ -102,6 +102,17 @@
     xwayland.enable = true;
   };
 
+  programs.uwsm = {
+    enable = true;
+    waylandCompositors = {
+      hyprland = {
+        prettyName = "Hyprland";
+        comment = "Hyprland compositor managed by UWSM";
+        binPath = "/run/current-system/sw/bin/Hyprland";
+      };
+    };
+  };
+
   security.polkit.enable = true;
   xdg.portal = {
     enable = true;
@@ -139,6 +150,7 @@
 
   programs.zsh.enable = true;
   programs.dconf.enable = true;
+  programs.nix-ld.enable = true;
 
   users.users.jorge = {
     isNormalUser = true;
