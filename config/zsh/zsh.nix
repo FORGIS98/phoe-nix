@@ -22,6 +22,8 @@
       plugins = [ "git" "ssh-agent" ];
     };
 
-    initContent = builtins.readFile ./extra.zsh;
+    initContent = ''
+      source "${config.home.homeDirectory}/.config/zsh/extra.zsh"
+    '';
   };
 }

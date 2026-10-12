@@ -1,18 +1,26 @@
 {
-    "chat.tools.autoApprove": true,
-    "chat.agent.maxRequests": 300,
+    "chat.agent.maxRequests": 50,
+    "chat.permissions.default": "Manual permissions",
     "chat.tools.terminal.enableAutoApprove": true,
+    "chat.tools.terminal.ignoreDefaultAutoApproveRules": false,
+    "chat.tools.terminal.blockDetectedFileWrites": "outsideWorkspace",
     "chat.tools.terminal.autoApprove": {
-        "rm": false,
-        "rmdir": false,
-        "del": false,
-        "kill": false,
-        "curl": false,
-        "wget": false,
-        "eval": false,
-        "chmod": false,
-        "chown": false,
-        "/^Remove-Item\\b/i": false
+        "/\\b(chmod|chown|chgrp|setfacl|chattr)\\b/i": {
+            "approve": false,
+            "matchCommandLine": true
+        },
+        "/\\b(rm|shred|wipe|dd|mkfs)\\b/i": {
+            "approve": false,
+            "matchCommandLine": true
+        },
+        "/\\b(sudo|su|doas|pkexec)\\b/i": {
+            "approve": false,
+            "matchCommandLine": true
+        },
+        "/\\b(nix-env -[ei]|nix profile (install|remove)|pacman -[R|S])\\b/i": {
+            "approve": false,
+            "matchCommandLine": true
+        }
     },
     "chat.viewSessions.orientation": "stacked",
     "chat.sessionSync.enabled": true,

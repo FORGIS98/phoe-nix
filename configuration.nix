@@ -108,7 +108,7 @@
       hyprland = {
         prettyName = "Hyprland";
         comment = "Hyprland compositor managed by UWSM";
-        binPath = "/run/current-system/sw/bin/Hyprland";
+        binPath = "/run/current-system/sw/bin/start-hyprland";
       };
     };
   };
@@ -139,23 +139,13 @@
 
   console.keyMap = "es";
 
-  services.greetd = {
-    enable = true;
-    settings.default_session = {
-      command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --asterisks --cmd 'uwsm start hyprland-uwsm.desktop'";
-      user = "greeter";
-    };
-  };
-
-  # NO ACTIVE
   services.displayManager.ly = {
-    enable = false;
+    enable = true;
     settings = {
       animation = "matrix";
       numlock = true;
       save = true;
       load = true;
-      waylandsessions = "/run/current-system/sw/share/wayland-sessions";
     };
   };
 

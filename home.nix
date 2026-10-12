@@ -103,7 +103,10 @@ in
   qt = {
     enable = true;
     platformTheme.name = "gtk3";
-    style.name = "adwaita-dark";
+    style = {
+      name = "adwaita-dark";
+      package = pkgs.adwaita-qt;
+    };
   };
 
   programs.vscode = {
@@ -149,7 +152,7 @@ in
     ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/waybar";
     ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/rofi";
     ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/kitty";
-    # ".zshrc".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/zsh/.zshrc";
+    ".config/zsh".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/config/zsh";
   };
 
   home.stateVersion = "26.05";
