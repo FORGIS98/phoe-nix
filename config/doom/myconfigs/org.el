@@ -151,7 +151,7 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
            :prepend t)
           ("pj" "journal" entry
            (file+datetree "personal/journal.org")
-           "* %?"
+           "* ¿En que he fallado?\n* ¿Que he hecho bien?\n* ¿Que podría haber hecho de forma diferente?%?"
            :unnarrowed t))))
 
 (map! :leader
