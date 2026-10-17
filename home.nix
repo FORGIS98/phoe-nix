@@ -32,6 +32,7 @@ in
     zsh-autosuggestions
     zsh-syntax-highlighting
     kitty
+    chezmoi
     hyprlauncher
     kdePackages.dolphin
     neovim
@@ -59,6 +60,7 @@ in
     awww
     hyprcursor
     hypridle
+    mcp-nixos
 
     # BEGIN doom-emacs dependencies
     ripgrep
