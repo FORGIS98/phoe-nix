@@ -18,4 +18,4 @@ if ! awww query >/dev/null 2>&1; then
     done
 fi
 
-awww img --resize crop --transition-type none "${wallpapers[RANDOM % ${#wallpapers[@]}]}"
+awww img --resize crop --transition-type center "${wallpapers[RANDOM % ${#wallpapers[@]}]}"

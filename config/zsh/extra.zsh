@@ -28,3 +28,5 @@ extract () {
 
 zstyle :omz:plugins:ssh-agent identities id_ed25519
 zstyle :omz:plugins:ssh-agent lifetime 8h
+
+alias cleannix="sudo nix-env --delete-generations old ; sudo nix-collect-garbage -d ; sudo nix-store --optimize ; sudo nixos-rebuild switch --flake ~/phoe-nix#forgisOS"

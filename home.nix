@@ -116,6 +116,7 @@ in
     profiles.default.extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       pkief.material-icon-theme
+      dracula-theme.theme-dracula
     ];
   };
 

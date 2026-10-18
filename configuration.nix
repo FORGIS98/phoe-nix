@@ -59,11 +59,18 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.editor = false;
+  boot.loader.systemd-boot.consoleMode = "keep";
+  boot.loader.timeout = 8;
+  boot.loader.systemd-boot.extraInstallCommands = ''
+    ${pkgs.gnused}/bin/sed -i 's/^default .*/default @saved/' ${config.boot.loader.efi.efiSysMountPoint}/loader/loader.conf
+  '';
 
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "forgisOS";
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.firewall.trustedInterfaces = [ "lo" ];
 
   hardware.bluetooth = {
     enable = true;

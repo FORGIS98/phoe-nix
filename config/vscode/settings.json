@@ -20,7 +20,9 @@
         "/\\b(nix-env -[ei]|nix profile (install|remove)|pacman -[R|S])\\b/i": {
             "approve": false,
             "matchCommandLine": true
-        }
+        },
+        "nix-instantiate": true,
+        "printf": true
     },
     "chat.viewSessions.orientation": "stacked",
     "chat.sessionSync.enabled": true,
@@ -36,5 +38,6 @@
         "https://github.com/microsoft/vscode/wiki/*": true,
         "https://wiki.hypr.land": true
     },
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Dracula Theme"
 }
