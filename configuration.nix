@@ -16,6 +16,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   fonts = {
     packages = with pkgs; [
       dejavu_fonts
@@ -159,7 +162,7 @@
 
   users.users.jorge = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
     shell = pkgs.zsh;
   };
 
