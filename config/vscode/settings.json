@@ -39,5 +39,6 @@
         "https://wiki.hypr.land": true
     },
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Dracula Theme"
+    "workbench.colorTheme": "Dracula Theme",
+    "git.enableSmartCommit": true
 }

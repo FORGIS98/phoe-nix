@@ -61,6 +61,7 @@ in
     hyprcursor
     hypridle
     mcp-nixos
+    flameshot
 
     # BEGIN doom-emacs dependencies
     ripgrep
